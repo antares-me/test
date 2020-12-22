@@ -19,7 +19,7 @@
         "friendsofphp/php-cs-fixer": "^2.15",
         "povils/phpmnd": "^2.1",
         "designsecurity/progpilot": "dev-master",
-        "sebastian/phpcpd": "^5.0@dev",
+        "sebastian/phpcpd": "^5.0.1@dev",
         "phpunit/phpunit": "^8.2",
         "vimeo/psalm": "^3.0@dev",
         "phpstan/phpstan": "^0.12.0@dev",
