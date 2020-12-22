@@ -15,10 +15,10 @@
     ],
     "require": {
         "phpro/grumphp": "*",
+	"phpunit/php-timer": "2.1.3",
         "nikic/php-parser": "^4.2",
         "friendsofphp/php-cs-fixer": "^2.15",
         "povils/phpmnd": "^2.1",
-        "phpunit/phpunit": "^8.2",
         "vimeo/psalm": "^3.0",
         "phpstan/phpstan": "^0.12.0",
         "phan/phan": "dev-master",
@@ -47,18 +47,14 @@
         "symfony/yaml": "~4.4 || ~5.0"
     },
     "require-dev": {
-        "brianium/paratest": "^6.1.1",
         "composer/composer": "^1.10.11 || ^2.0.1",
         "nikic/php-parser": "~4.0",
         "php-parallel-lint/php-parallel-lint": "^1.2",
-        "phpspec/phpspec": "^6.2",
-        "phpspec/prophecy-phpunit": "^2.0",
-        "phpunit/phpunit": "^9.2"
+        "phpspec/phpspec": "^6.2"
     },
     "suggest": {
         "atoum/atoum": "Lets GrumPHP run your unit tests.",
         "behat/behat": "Lets GrumPHP validate your project features.",
-        "brianium/paratest": "Lets GrumPHP run PHPUnit in parallel.",
         "codeception/codeception": "Lets GrumPHP run your project's full stack tests",
         "consolidation/robo": "Lets GrumPHP run your automated PHP tasks.",
         "designsecurity/progpilot": "Lets GrumPHP be sure that there are no vulnerabilities in your code.",
@@ -78,7 +74,6 @@
         "phpmd/phpmd": "Lets GrumPHP sort out the mess in your code",
         "phpspec/phpspec": "Lets GrumPHP spec your code.",
         "phpstan/phpstan": "Lets GrumPHP discover bugs in your code without running it.",
-        "phpunit/phpunit": "Lets GrumPHP run your unit tests.",
         "povils/phpmnd": "Lets GrumPHP help you detect magic numbers in PHP code.",
         "roave/security-advisories": "Lets GrumPHP be sure that there are no known security issues.",
         "sebastian/phpcpd": "Lets GrumPHP find duplicated code.",
