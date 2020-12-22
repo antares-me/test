@@ -36,7 +36,8 @@ jobs:
                   key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
                   restore-keys: ${{ runner.os }}-composer-
             - name: Install dependencies
-              run: composer update --prefer-dist --no-progress --no-suggest ${{ matrix.composer-options }}
+              run: composer update --no-progress ${{ matrix.composer-options }}
+              # --prefer-dist 
             - name: Set git variables
               run: |
                 git config --global user.email "you@example.com"
