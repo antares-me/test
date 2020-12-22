@@ -18,7 +18,6 @@
         "nikic/php-parser": "^4.2",
         "friendsofphp/php-cs-fixer": "^2.15",
         "povils/phpmnd": "^2.1",
-        "sebastian/phpcpd": "^5.0.1",
         "phpunit/phpunit": "^8.2",
         "vimeo/psalm": "^3.0",
         "phpstan/phpstan": "^0.12.0",
