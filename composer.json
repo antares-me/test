@@ -1,5 +1,5 @@
 {
-    "name": "phpro/grumphp",
+    "name": "antares-me/test",
     "type": "composer-plugin",
     "description": "A composer plugin that enables source code quality checks.",
     "license": "MIT",
