@@ -1,0 +1,197 @@
+parameters:
+    bin_dir: "./vendor/bin"
+    git_dir: "."
+    hooks_dir: ~
+    hooks_preset: local
+    git_hook_variables:
+         VAGRANT_HOST_DIR: .
+         VAGRANT_PROJECT_DIR: /var/www
+    stop_on_failure: false
+    ignore_unstaged_changes: false
+    hide_circumvention_tip: false
+    process_async_limit: 10
+    process_async_wait: 1000
+    process_timeout: 60
+    ascii:
+        failed:
+            - grumphp-grumpy.txt
+            - nopecat.txt
+        succeeded:
+            - grumphp-happy.txt
+            - me-gusta.txt
+    tasks:
+        phplint:
+            exclude: []
+            jobs: ~
+            ignore_patterns: []
+            triggered_by: ['php', 'phtml', 'php3', 'php4', 'php5']
+        phpparser:
+            ignore_patterns: []
+            kind: php7
+            visitors: {}
+            triggered_by: ['php']
+        phpcs:
+            standard: []
+            severity: ~
+            error_severity: ~
+            warning_severity: ~
+            tab_width: ~
+            report: full
+            report_width: ~
+            whitelist_patterns: []
+            encoding: ~
+            ignore_patterns: ['/^vendor\/(.*)/', '/^lib/bx24\/(.*)']
+            sniffs: []
+            triggered_by: ['php']
+        # codeception:
+        #     config_file: ~
+        #     fail_fast: false
+        #     suite: ~
+        #     test: ~
+        phpcsfixer:
+            config_file: ~
+            config: ~
+            fixers: []
+            level: ~
+            verbose: true
+        phpcsfixer2:
+            allow_risky: ~
+            cache_file: ~
+            config: '.php_cs'
+            rules: []
+            using_cache: ~
+            config_contains_finder: true
+            verbose: true
+            diff: false
+            triggered_by: ['php']
+        phpversion:
+            project: '7.2'
+        # phpmd:
+        #     whitelist_patterns: []
+        #     exclude: []
+        #     ruleset: ['cleancode', 'codesize', 'naming']
+        #     triggered_by: ['php']
+        # php7cc:
+        #     exclude: []
+        #     level: ~
+        #     triggered_by: ['php']
+        # phpcpd:
+        #     directory: '.'
+        #     exclude: ['vendor']
+        #     names_exclude: []
+        #     regexps_exclude: []
+        #     fuzzy: false
+        #     min_lines: 5
+        #     min_tokens: 70
+        #     triggered_by: ['php']
+        # deptrac:
+        #     depfile: ~
+        #     formatter_graphviz: true
+        #     formatter_graphviz_display: true
+        #     formatter_graphviz_dump_image: ~
+        #     formatter_graphviz_dump_dot: ~
+        #     formatter_graphviz_dump_html: ~
+        # file_size:
+        #     max_size: 10M
+        #     ignore_patterns: ['/^vendor\/(.*)/', '/^lib/bx24\/(.*)']
+        # gherkin:
+        #     directory: 'features'
+        #     align: ~
+        # git_blacklist:
+        #     keywords:
+        #         - "die("
+        #         - "var_dump("
+        #         - "exit;"
+        #     whitelist_patterns: []
+        #     triggered_by: ['php']
+        #     regexp_type: G
+        # git_branch_name:
+        #     whitelist:
+        #         - "master"
+        #         # - "/JIRA-\d+/"
+        #     blacklist:
+        #         - "develop"
+        #         # - "master"
+        #     additional_modifiers: ''
+        #     allow_detached_head: true
+        # git_commit_message:
+        #     allow_empty_message: false
+        #     enforce_capitalized_subject: true
+        #     enforce_no_subject_punctuations: false
+        #     enforce_no_subject_trailing_period: true
+        #     enforce_single_lined_subject: true
+        #     type_scope_conventions: []
+        #     max_body_width: 72
+        #     max_subject_width: 60
+        #     matchers:
+        #         Must contain JIRA issue number: /JIRA-\d+/
+        #     case_insensitive: true
+        #     multiline: true
+        #     additional_modifiers: ''
+        jsonlint:
+            ignore_patterns: []
+            detect_key_conflicts: false
+        # kahlan:
+        #     config: ~
+        #     src: []
+        #     spec: []
+        #     pattern: "*Spec.php"
+        #     reporter: ~
+        #     coverage: ~
+        #     clover: ~
+        #     istanbul: ~
+        #     lcov: ~
+        #     ff: 0
+        #     no_colors: true
+        #     no_header: false
+        #     include: ['*']
+        #     exclude: []
+        #     persistent: true
+        #     cc: false
+        #     autoclear: ~
+        # phan:
+        #     config_file: .phan/config.php
+        #     output_mode: text
+        #     output: null
+        #     triggered_by: [php]
+        # phing:
+        #     build_file: ~
+        #     task: ~
+        #     triggered_by: [php]
+        # phpmnd:
+        #     directory: .
+        #     whitelist_patterns: []
+        #     exclude: []
+        #     exclude_name: []
+        #     exclude_path: []
+        #     extensions: []
+        #     hint: false
+        #     # ignore_funcs: []
+        #     ignore_numbers: []
+        #     ignore_strings: []
+        #     strings: false
+        #     triggered_by: ['php']
+        # phpspec:
+        #     config_file: ~
+        #     format: ~
+        #     stop_on_failure: false
+        #     verbose: false
+        # phpstan:
+        #     autoload_file: ~
+        #     configuration: ~
+        #     level: 0
+        #     force_patterns: []
+        #     ignore_patterns: []
+        #     triggered_by: ['php']
+        #     memory_limit: ~
+        # phpunitbridge:
+        #     config_file: ~
+        #     testsuite: ~
+        #     group: []
+        #     always_execute: false
+        # progpilot:
+        #     config_file: .progpilot/configuration.yml
+        #     triggered_by: [php]
+    testsuites: []
+    extensions: []
+
